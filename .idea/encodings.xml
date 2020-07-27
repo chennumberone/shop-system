@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/goods-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/point-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/storage-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/system-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-service" charset="UTF-8" />
+  </component>
+</project>

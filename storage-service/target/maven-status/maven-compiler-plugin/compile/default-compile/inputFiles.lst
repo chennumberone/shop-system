@@ -1,0 +1,11 @@
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\config\WebConfig.java
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\serviceImpl\StorageServiceImpl.java
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\util\RedisUtil.java
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\dao\StorageDao.java
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\config\AccessLimit.java
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\StorageApplication.java
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\config\RedisConfig.java
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\config\SeataAutoConfig.java
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\config\UserLoginInterceptor.java
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\config\AccessInterceptor.java
+F:\练习\dubboPractise\shop-system\storage-service\src\main\java\com\chl\config\GlobalExceptionHandler.java

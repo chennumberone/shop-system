@@ -1,0 +1,6 @@
+com\dataObject\Storage.class
+com\dataObject\User.class
+com\result\EmCommenError.class
+com\result\GlobalException.class
+com\dataObject\Goods.class
+com\result\CommenReturnObject.class

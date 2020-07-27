@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chl.dao.UserDao">
+    <update id="decreMoney">
+        update user set money=money-#{money} where username=#{username}
+    </update>
+
+    <select id="getPwdByUsername" resultType="java.lang.String">
+    select password from user where username=#{username}
+  </select>
+    <select id="queryMoneyByUsername" resultType="java.math.BigDecimal">
+      select money from user where username=#{username} ;
+    </select>
+    <select id="getUserByUsername" resultType="com.dataObject.User">
+        select * from user where username=#{username};
+    </select>
+</mapper>

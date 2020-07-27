@@ -1,0 +1,13 @@
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\GoodsServiceApplication.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\serviceImpl\GoodsServiceImpl.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\config\SeataAutoConfig.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\config\RedisConfig.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\dao\GoodsDao.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\config\AccessLimit.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\controller\RouteController.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\config\GlobalExceptionHandler.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\config\WebConfig.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\config\AccessInterceptor.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\controller\GoodsController.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\config\UserLoginInterceptor.java
+F:\练习\dubboPractise\shop-system\goods-service\src\main\java\com\chl\util\RedisUtil.java

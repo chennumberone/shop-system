@@ -1,0 +1,12 @@
+com\chl\controller\RouteController.class
+com\chl\config\WebConfig.class
+com\chl\GoodsServiceApplication.class
+com\chl\config\RedisConfig.class
+com\chl\config\UserLoginInterceptor.class
+com\chl\serviceImpl\GoodsServiceImpl.class
+com\chl\dao\GoodsDao.class
+com\chl\config\AccessLimit.class
+com\chl\config\AccessInterceptor.class
+com\chl\controller\GoodsController.class
+com\chl\util\RedisUtil.class
+com\chl\config\GlobalExceptionHandler.class

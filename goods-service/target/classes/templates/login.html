@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" type="text/css" href="./static/css/layui.css">
+    <script src="./static/jquery-3.0.0.js"></script>
+</head>
+
+<body style="padding-top: 180px;">
+<div class="layui-form" style="width: 400px;margin: 0 auto;">
+    <div class="layui-form-item">
+        <label class="layui-form-label">账号</label>
+        <div class="layui-input-block">
+            <input type="text" name="username" id="username" required lay-verify="required" placeholder="请输入账号"
+                   autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">密码</label>
+        <div class="layui-input-block">
+            <input type="password" name="password" id="password" required lay-verify="required" placeholder="请输入密码"
+                   autocomplete="off" class="layui-input">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" id="submit-btn">登录</button>
+            <button type="reset" class="layui-btn layui-btn-primary" id="reset">重置</button>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $().ready(function () {
+
+        $("#reset").click(function () {
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+        })
+
+        $("#submit-btn").click(function () {
+            var username = $("#username").val();
+            var password = $("#password").val();
+            $.ajax({
+                url: 'http://localhost:8080/login',
+                type: 'get',
+                data: {
+                    username: username,
+                    password: password
+                },
+                //解决跨域问题
+                xhrFields: {
+                    withCredentials: true
+                },
+                // withCredentials:true,
+                success: function (res) {
+                    console.log(res);
+                    if (res.status == "success") {
+                        alert("登录成功");
+                        location.href = "http://localhost:8081/ToList";
+                    } else {
+                        alert("登录失败");
+                    }
+                },
+                fail: function (res) {
+                    alert("登录失败:" + res);
+                }
+            })
+        })
+    })
+</script>
+
+</html>

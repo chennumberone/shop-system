@@ -1,0 +1,6 @@
+com\interfaces\StorageService.class
+com\interfaces\GoodsService.class
+com\interfaces\UserService.class
+com\test\MyBeanPostProcessor.class
+com\test\Book.class
+com\interfaces\PointService.class

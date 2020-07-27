@@ -1,0 +1,35 @@
+spring:
+  # mysql
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost/shop-system?serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: storage-service
+  #redis
+  redis:
+    host: 192.168.209.201
+    jedis:
+      pool:
+        max-active: 2000
+        max-idle: 50
+        min-idle: 5
+    password: 123456
+    cluster:
+      nodes: 192.168.209.201:30001,192.168.209.201:30002,192.168.209.201:30003,192.168.209.201:30004,192.168.209.201:30005,192.168.209.201:30006
+  #dubbo
+  dubbo:
+    application:
+      id: storage-service
+      name: storage-service
+    registry:
+      address: zookeeper://192.168.209.202:2181;
+    protocol:
+      name: dubbo
+      port: 20882
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+server:
+  port: 8082

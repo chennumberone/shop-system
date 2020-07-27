@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" type="text/css" href="/css/layui.css">
+    <script src="/jquery-3.0.0.js"></script>
+</head>
+<body style="padding:0px 200px;">
+<table id="demo" lay-filter="test"></table>
+</body>
+<style>
+    .layui-table-cell{
+        height:80px;
+        line-height: 80px;
+    }
+</style>
+<script src="/layui.js"></script>
+
+<script>
+
+    layui.use('table', function () {
+        var table = layui.table;
+        //第一个实例
+        table.render({
+            elem: '#demo'
+            , url: 'http://localhost:8081/query' //数据接口
+            , method: 'post'
+            , page: true //开启分页
+            , limit: 3
+            , limits: [3,5,10]
+            , cols: [ [
+                { field: 'id', title: 'ID', sort: true },
+                { field: 'name',title: '名称' },
+                { field: 'price',  title: '价格', sort: true },
+                { field: 'img_path',title: '图片',align: "center", templet: "#imgtmp"},
+                {title:'操作',align:"center",toolbar:"#buy"}
+            ]],
+            parseData: function (res) { //将原始数据解析成 table 组件所规定的数据
+                console.log(res.data);
+                return {
+                    "code": res.code, //解析接口状态
+                    "msg": res.msg, //解析提示文本
+                    "count": res.len, //解析数据长度
+                    "data": res.data //解析数据列表
+                };
+            },
+            request: {
+                pageName: 'pageNum' // 页码的参数名称，默认：page
+                , limitName: 'pageSize' //每页数据量的参数名，默认：limit
+            },
+
+        });
+
+        table.on('row(test)', function(obj){
+            console.log(obj.data.price) //得到当前行数据
+            console.log(obj.data.id) //得到当前行数据
+            var money=obj.data.price;
+            var id=obj.data.id;
+            $.ajax({
+                url:'http://localhost:8081/buy',
+                type:'get',
+                data:{
+                    money:money,
+                    id:id
+                },
+                success:function (res) {
+                    console.log(res);
+                    if(res.status=="fail"&&res.data.errorCode==30001){
+                        alert("余额不足");
+                    }else if(res.status=="fail"&&res.data.errorCode==40001){
+                        alert("库存不足");
+                    }
+                    else if(res.status=="fail"&&res.data.errorCode==50001){
+                        alert("购买错误");
+                    }
+                    else if(res.status="success"){
+                        alert("购买成功");
+                    }else{
+                        alert("系统故障");
+                    }
+                }
+            })
+        });
+
+    });
+
+</script>
+
+<script>
+
+</script>
+
+<script id="imgtmp">
+    <img src="{{ d.img_path }}" style="width: 80px; height: 80px;">
+</script>
+
+<script id="buy">
+        <button class="layui-btn" id="submit-btn" lay-submit lay-filter="formDemo">立即购买</button>
+</script>
+
+</html>

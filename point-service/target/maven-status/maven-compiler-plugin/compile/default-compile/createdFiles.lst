@@ -1,0 +1,10 @@
+com\chl\config\RedisConfig.class
+com\chl\config\AccessInterceptor.class
+com\chl\util\RedisUtil.class
+com\chl\dao\PointDao.class
+com\chl\config\WebConfig.class
+com\chl\PointApplication.class
+com\chl\config\UserLoginInterceptor.class
+com\chl\serviceImpl\PointServeImpl.class
+com\chl\config\GlobalExceptionHandler.class
+com\chl\config\AccessLimit.class
